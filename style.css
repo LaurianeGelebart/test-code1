@@ -1,0 +1,1137 @@
+@font-face {
+    font-family: "Ink Free";
+    src: url("../font/Inkfree.ttf");
+}
+
+
+
+
+/*----------------------------------PAGE----------------------------------*/
+body {}
+
+html {
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    font-family: 'Coming Soon', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+h2 {
+    text-align: center;
+    z-index: 8;
+    font-family: 'Coming Soon', sans-serif;
+}
+
+section {
+    margin: 4vh 0;
+    padding: 2vh 8%;
+}
+
+/*----------------------------------NAVIGATION----------------------------------*/
+
+.navbarSt {
+    display: block;
+}
+
+.navbar {
+    padding: 10px 20px !important;
+    z-index: 100;
+    display: flex;
+    position: fixed !important;
+    align-items: center;
+    background-color: rgb(60, 60, 60);
+    width: 100%;
+    box-shadow: 2px -10px 2vh 0px black;
+    transition: all 0.25s ease-in-out;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navbar_element {
+    font-family: 'Coming Soon', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.8vh;
+    margin: 0 2vw;
+    padding: 0;
+    text-decoration: none;
+    background: linear-gradient(to top, black 0%, black 2%, transparent 2.01%) no-repeat center bottom / 0 100%;
+    transition: background-size .4s;
+}
+
+.navbar_element:hover {
+    color: black !important;
+    background-size: 100% 100%;
+}
+
+.fleche {
+    fill: #08999F;
+    position: fixed;
+    right: 3%;
+    bottom: 4%;
+    transition: 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    z-index: 10;
+    width: 3vw;
+}
+
+.fleche:hover {
+    fill: #2E7381;
+}
+
+.navbar.scroll {
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0.9;
+}
+
+.navbar.scroll .logo_blanc {
+    width: 50px;
+}
+
+
+.navbarTel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.logoBurger {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+
+.navbarTel .hamburger {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 8vw;
+    height: 3px;
+    margin-bottom: 10px;
+    background: #000;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.navbarTel .hamburger:after,
+.navbarTel .hamburger:before {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.navbarTel .hamburger:before {
+    top: -15px;
+}
+
+.navbarTel .hamburger:after {
+    bottom: -15px;
+}
+
+.navbarTel input {
+    display: none;
+}
+
+.navbarTel input:checked + .menu {
+    box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+    border-radius: 0;
+}
+
+.navbarTel input:checked + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.navbarTel input:checked + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+.navbarTel input:checked + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.navbarTel .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
+}
+
+.navbarTel ul {
+    z-index: 200;
+    display: none;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    margin: 10vh 0 0;
+    width: 90vw;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    opacity: 0;
+    z-index: 100
+}
+
+.navbarTel a {
+    margin: 5vh 0 !important;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 8vw !important;
+}
+
+/*----------------------------------HEADER----------------------------------*/
+
+.containT {
+    width: 100%;
+    margin: 0;
+}
+
+.parallax {
+    height: 100vh;
+}
+
+.header {
+    color: white;
+    position: relative;
+}
+
+.lesTitres {
+    text-align: center;
+    margin: 0 -15vw 0 0;
+    max-width: 100% !important;
+}
+
+.illu {
+    padding: 0 3vw;
+    width: 100%;
+    height: auto;
+}
+
+.titre {
+    color: #08999F;
+    transition: 0.8s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-size: 8vw;
+    font-family: 'Ink Free', sans-serif;
+    animation: arrive 2s ease-in-out;
+    padding: 10vh 2vw 3vh;
+}
+
+.margeTit {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sous_titre {
+    color: black;
+    padding: 0;
+    transition: 0.8s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-size: 1.2vw;
+    font-family: 'Coming Soon', sans-serif;
+    font-weight: 100;
+    text-transform: none;
+    animation: arrive2 2s ease-in-out;
+    opacity: 1;
+    margin-left: -1.5vw ; 
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+}
+
+@keyframes arrive2 {
+    0% {
+        transform: translateY(90%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(90%);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*----------------------------------QUI SUIS-JE----------------------------------*/
+main {
+    margin: 0;
+    padding: 5% 0;
+    height: 80%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.titrePartie {
+    text-shadow: 1px 1px #08999F;
+    margin: 5vh auto 2vh;
+    font-family: 'Ink Free';
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: #08999F;
+    padding-bottom: 6vh;
+    opacity: 0;
+}
+
+.titrePartie.scroll {
+    animation: scroll 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-40%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.presentation {
+    font-family: 'Coming Soon', sans-serif;
+    margin-bottom: 20vh;
+}
+
+.presentation_flex {
+    align-items: center;
+}
+
+.description {
+    padding: 0 2vw;
+    font-size: 1.3vw;
+    text-align: justify;
+}
+
+.lesInformations {
+    opacity: 1;
+
+}
+
+.lesInformations.scroll {
+    opacity: 1;
+    animation: scroll2 1.3s ease-in-out;
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.photo {
+    overflow: hidden;
+    max-width: 800px;
+    max-height: 70vh;
+    margin: 0 5vw;
+    /* width: 50%;   
+    -webkit-clip-path: circle(40% at 60% 50%);*/
+}
+
+.row {
+    margin: 0 !important;
+}
+
+/*CV*/
+
+.boite_cv{
+    display: flex;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-family: 'Coming Soon', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 15vh ;
+}
+
+.buttonCV {
+   /* background: url(images/draw.png);
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position: center;*/
+    background-color: #269C90;
+    /* background-size: 13vw; */
+    color: white;
+    font-size: 1.6vw;
+    margin: 7vh 22%;
+    padding: 2.5vh;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 65%;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.cadre_haut{
+    position: absolute;
+    left : 20% ; 
+    top : 50% ;
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    width: 8%;
+}
+
+.cadre_bas{
+    position: absolute;
+    right : 20% ; 
+    bottom : 0 ;
+    opacity: 0;
+    transform: rotate(90);
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    width: 8%;
+}
+
+.boite_cv:hover .cadre_haut{
+    transform : translate(-50%, -60%);
+    opacity: 1;
+}
+
+.boite_cv:hover .cadre_bas{
+    transform : translate(60%, 80%);
+    opacity: 1;
+}
+
+.boite_cv:hover .buttonCV{
+    transform : scale(91%) ;
+}
+
+
+/*------------------------------------REALISATIONS------------------------------------*/
+
+.btnSelect {
+    font-weight: bold;
+}
+
+.categories {
+    margin: 0 10vw 3vh !important;
+}
+
+.lesBoutons {
+    font-family: 'Coming Soon', sans-serif;
+    margin: 0 2vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    display: flex;
+    flex-wrap: wrap;    
+    text-decoration: none;
+    background: linear-gradient(to top, black 0%, black 2%, transparent 2.01%) no-repeat center bottom / 0 100%;
+    transition: background-size .4s;
+}
+
+.lesBoutons:hover {
+    color: black !important;
+    background-size: 100% 100%;
+}
+
+.réalisations {
+    background-color: white;
+    text-align: center;
+}
+
+.galerie {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.item-galerie {
+    position: relative;
+    overflow: hidden;
+    transition: 0.7s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-sizing: border-box;
+    width: 24vw !important;
+    height: 17vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    margin: 1.5vw;
+    box-shadow: 0 0 1.2vh grey;
+}
+
+.item-galerie div {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.item-galerie a {
+    width: 100%;
+    height: 100%;
+}
+
+/* titre */
+.item-galerie h2 {
+    font-size: 2.5vw;
+    color: #FFF;
+    transition: 0.7s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    opacity: 0;
+    text-shadow: 2px 0 3px black;
+    padding: 25% 1.5vw;
+}
+
+
+.item-galerie:hover h2 {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* image */
+.item-galerie img {
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center center;
+    transition: 0.7s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    opacity: 0.8;
+}
+
+.item-galerie:hover img {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+.item-galerie div {
+    text-align: center;
+}
+
+.item-galerie:hover .domaines li {
+    animation: app 1.3s ease-in-out forwards;
+}
+
+@keyframes app {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*---------------------------------CONTACT-----------------------------------*/
+
+
+.laBoite {
+    background: url(images/contact.svg) no-repeat center center;
+    background-size: 60%;
+    padding: 25%;
+    margin: -27vh 10% 0;
+    font-size: 1.5vw;
+    font-family: 'Coming Soon', sans-serif;
+}
+
+.logos {
+    width: 5vw;
+    margin: 2vh 1vw;
+    transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.logos:hover {
+   transform: scale(90%);
+}
+
+/*----------------------------------FOOTER----------------------------------*/
+
+footer {
+    margin: 0;
+    width: 100%;
+    background-color: #08999F;
+    text-align: center;
+    padding: 0.6vw 0;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color:#2E7381 !important; 
+}
+
+.reseau {
+    width: 3vw;
+    padding: 1vh 1vw;
+    transition: ease 0.3s;
+}
+
+.reseau:hover {
+    opacity: 0.6;
+}
+
+footer p {
+    color: white;
+    font-size: 1vw;
+    padding: 0 1vw 0.5vh;
+}
+
+.contactez {
+    font-size: 1.3vw
+}
+
+/*----------------------------------PAGES RÉALISATION----------------------------------*/
+
+
+.carousel-item img {
+    width: auto;
+    max-height: 80vh;
+    max-width: 40vw;
+}
+
+#myCarousel .carousel-indicators {
+    position: static;
+    margin-top: 0px
+}
+
+#myCarousel .carousel-indicators > li {
+    width: 100px;
+    margin-bottom: 6vh;
+}
+
+#myCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5
+}
+
+#myCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+
+#myCarousel .carousel-indicators li:hover img {
+    opacity: 0.75
+}
+
+.rea {
+    padding-top: 5vh;
+}
+
+.couleur {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.lesDiv1 {
+    padding-left: 7% !important;
+    margin-top: 5vh;
+}
+
+.lesDiv2 {
+    padding-right: 7% !important;
+}
+
+.logo_blanc {
+    width: 70px;
+
+}
+
+.rea section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2vh 0 0;
+}
+
+.rea .titrePartie {
+    opacity: 1;
+    color: rgb(70, 170, 180);
+    padding-bottom: 0.2vh;
+    font-size: 2.5vw;
+}
+
+.rea .explication {
+    font-size: 1.2vw;
+    text-align: justify;
+    font-family: 'Coming Soon', sans-serif;
+    padding: 5vh 0 !important;
+}
+
+.section_lien {
+    display: flex;
+    flex-direction: row !important;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2vh auto !important;
+}
+
+.lien_autre_projet{
+    color :  rgb(70, 170, 180);
+    transition: 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.lien_autre_projet:hover{
+    color :  #2E7381 !important;
+    font-weight: bold;
+}
+
+/* .prec-suiv {
+    background: url(images/draw.png);
+    background-size: 22vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: 1.85vw;
+    width: 35%;
+    margin: 1vh 0;
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-family: 'Coming Soon', sans-serif;
+} */
+
+.boite_ps{
+    display: flex;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-family: 'Coming Soon', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 15vh ;
+}
+
+.prec-suiv {
+   /* background: url(images/draw.png);
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position: center;*/
+    background-color: #08999F;
+    /* background-size: 13vw; */
+    color: white;
+    font-size: 1.6vw;
+    margin: 7vh 22%;
+    padding: 2vh;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 50%;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.boite_ps .cadre_haut{
+    left : 26% ; 
+    top : 50% ;
+    width: 8%;
+}
+
+.boite_ps .cadre_bas{
+    right : 26% ; 
+    bottom : 0 ;
+    width: 8%;
+}
+
+.boite_ps:hover .cadre_haut{
+    transform : translate(-30%, -50%);
+    opacity: 1;
+}
+
+.boite_ps:hover .cadre_bas{
+    transform : translate(30%, 50%);
+    opacity: 1;
+}
+
+.boite_ps:hover .prec-suiv{
+    transform : scale(91%) ;
+}
+
+
+lien_portfolio:hover {
+    transform: scale(1.05);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    border: none;
+    transform: scale(1.05);
+}
+
+.lien_ext {
+    font-family: serif;
+    padding: 2vw 4vw;
+    color: black;
+    font-size: 2vh;
+}
+
+.lien_ext:hover {
+    color: darkcyan;
+}
+
+
+video {
+    width: 100%;
+}
+
+.sketchfab{
+    display: flex;
+    justify-content: center;
+}
+
+.sketchfab iframe{
+    width: 40vw;
+    height: 50vh;
+}
+
+
+@keyframes defilestep {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*----------------------------------MENTIONS----------------------------------*/
+
+.section_mentions{
+    display: flex !important ;
+    align-items: flex-start !important ;
+    flex-direction: column !important ;
+}
+
+.section_mentions .titrePartie{
+    margin: 3vh auto 6vh;
+}
+
+.section_mentions p{
+    font-family: 'Coming Soon', sans-serif;
+}
+
+.section_mentions h3{
+    font-family: 'Coming Soon', sans-serif;
+    margin: 3vh 0 2vh;
+}
+
+/*----------------------------------RESPONSIVE----------------------------------*/
+
+@media (max-width: 0px) {
+
+    .navbar_element {
+        font-size: 2vw;
+    }
+
+    .description {
+        padding: 0 2vw;
+        font-size: 2vw;
+    }
+
+    .photo {
+        width: 40%;
+    }
+
+    .buttonCV {
+        font-size: 1.6vw;
+        margin: 2vh 0;
+    }
+
+    .parallax {
+        height: 100vh;
+    }
+
+    .illu {}
+
+    .lesTitres {}
+
+    .item-galerie h2 {
+        font-size: 2vw;
+    }
+
+    .item-galerie {
+        height: 350px;
+        width: 80vw !important;
+    }
+
+    .case li {
+        font-size: 1.5vw;
+    }
+
+    .formulaire_submit {
+
+        font-size: 1.6vw;
+        margin: 1vh 0;
+    }
+
+    .copyright {
+        font-size: 1.8vw;
+    }
+
+    .navbar ul {
+        padding-left: 0%;
+    }
+
+    .domaines li {
+        border-radius: 0.3rem;
+        padding: 0.4vh 0.8vw;
+        margin: 1vw;
+    }
+
+    .prec-suiv {
+        background-size: 18vw;
+        font-size: 1.85vw;
+        width: 25%;
+        margin: 1vh 0;
+        padding: 5vh 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .navbar_element {
+        font-size: 2vw;
+    }
+
+    .parallax {}
+
+    .illu {
+        margin: 20% 0;
+    }
+
+    .lesTitres {
+        margin: 10vh 0 0;
+    }
+
+    .titre {
+        font-size: 17vw;
+    }
+
+    .sous_titre {
+        font-size: 4.5vw;
+    }
+
+    .description {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .fleche{
+        width: 7vw;
+    }
+
+    .fleche svg{
+        width: 70px;
+        height: 70px;
+    }
+
+    .buttonCV {
+        margin-right: auto;
+        margin-left: auto;
+        background-size: 24vw;
+        font-size: 2.8vw;
+        margin-bottom: 6vh;
+        margin-top: 4vh;
+    }
+
+    .lesBoutons {
+        font-size: 3.2vw;
+        margin: 0 3vw;
+    }
+
+    .titrePartie {
+        padding: 2vh;
+        font-size: 8vw;
+    }
+
+    section {
+        margin: 0;
+        padding: 3% 5%
+    }
+
+    .item-galerie h2 {
+        font-size: 10vw;
+        margin-top: 0;
+    }
+
+    .item-galerie {
+        height: 30vh !important;
+        width: 80vw !important;
+    }
+
+    .copyright {
+        font-size: 1.8vw;
+    }
+
+    .rea section {
+        flex-direction: column;
+    }
+
+    .rea .titrePartie {
+        font-size: 10vw;
+    }
+
+    .rea .explication {
+        font-size: 4vw;
+        padding: 5vh 10vw !important;
+        width: 100% ; 
+    }
+    
+    .carousel-item img {
+        max-width: 70vw ; 
+    }
+    
+    .prec-suiv {
+        background-size: 40vw;
+        font-size: 3.5vw;
+        margin: 1vh auto;
+        padding: 1vh 0;
+    }
+
+    .cadre_bas{
+        display: none;
+    }
+
+    .cadre_haut{
+        display: none;
+    }
+
+
+    .lien_portfolio {
+        margin: 2vh 15vw
+    }
+
+    .contenu_image {
+        width: 80%;
+        margin: 0 0 3vh;
+    }
+
+    .explication {
+        width: 55vw;
+        font-size: 1.7vw;
+    }
+
+    .lien_ext {
+        margin: 20vh;
+        padding: 0;
+    }
+
+    .lesDiv1 {
+        padding-left: 0% !important;
+    }
+
+    .lesDiv2 {
+        padding-right: 0% !important;
+    }
+
+    .domaines li {
+        visibility: hidden;
+    }
+
+    .laBoite {
+        background-size: 90%;
+        padding: 25% 10%;
+        margin: -10vh 10% 0;
+        font-size: 2.8vw;
+    }
+
+    .logos {
+        width: 10vw;
+        margin: 2vh 5vw;
+    }
+
+    .navbarTel {
+        display: block;
+    }
+
+    .navbarSt {
+        display: none;
+    }
+
+
+}
