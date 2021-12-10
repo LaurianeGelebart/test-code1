@@ -7,11 +7,8 @@
 
 
 /*----------------------------------PAGE----------------------------------*/
-body {}
-
-html {
-    scroll-behavior: smooth;
-    position: relative;
+body {
+    position : relative ; 
 }
 
 
